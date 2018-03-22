@@ -1,5 +1,10 @@
 
 class PigLatinizer
+  
+  def translator(text)
+    text.split.collect { |word| piglatinize(word) }.join(" ")
+  end
+  
   def piglatinize(word)
     if !consonant?(word[0])
       word = word + "w"
@@ -17,7 +22,4 @@ class PigLatinizer
     !char.match(/[aAeEiIoOuU]/)
   end
 
-  def translator(text)
-    text.split.collect { |word| piglatinize(word) }.join(" ")
-  end
 end
