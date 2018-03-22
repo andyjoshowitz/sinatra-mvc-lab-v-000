@@ -18,6 +18,6 @@ class PigLatinizer
   end
 
   def translator(text)
-    text.split(" ").collect { |word| piglatinize(word) }.join(" ")
+    text.split.collect { |word| piglatinize(word) }.join(" ")
   end
 end
